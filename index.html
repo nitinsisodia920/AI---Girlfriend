@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunnu - Your AI Jaan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff758c;
+            --secondary: #ff7eb3;
+            --accent: #ff9a9e;
+            --bg-light: #fff0f3;
+        }
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: var(--bg-light);
+            background-image: 
+                radial-gradient(at 0% 0%, #fff1eb 0px, transparent 50%),
+                radial-gradient(at 100% 0%, #ace0f9 0px, transparent 50%),
+                radial-gradient(at 50% 100%, #ff9a9e 0px, transparent 50%);
+            color: #4a4a4a;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .cute-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(255, 117, 140, 0.15);
+        }
+        .cute-button {
+            background: white;
+            border: 2px solid #ff758c22;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .cute-button:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+            color: var(--primary);
+        }
+        .gunnu-bubble {
+            background: white;
+            border: 2px solid #fff5f6;
+            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.05);
+            border-radius: 20px 20px 20px 4px;
+        }
+        .user-bubble {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            box-shadow: 0 4px 15px rgba(255, 126, 179, 0.3);
+            color: white;
+            border-radius: 20px 20px 4px 20px;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        @keyframes float-heart {
+            0% { transform: translateY(0) scale(1); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+        }
+        .heart-particle {
+            position: absolute;
+            color: #ff758c;
+            pointer-events: none;
+            animation: float-heart 2s ease-out forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate-pop {
+            animation: pop 0.4s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.8); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse-soft {
+            animation: pulse-soft 2s infinite;
+        }
+        @keyframes pulse-soft {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

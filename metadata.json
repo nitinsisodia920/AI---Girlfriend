@@ -1,0 +1,7 @@
+{
+  "name": "Gunnu - Your AI Companion",
+  "description": "A photorealistic virtual girlfriend AI named Gunnu, designed for emotional connection, gentle flirting, and supportive companionship with voice and image generation capabilities.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
